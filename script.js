@@ -20,9 +20,11 @@ const getWeather = (city) =>{
 		max_temp.innerHTML = response.max_temp
 		wind_speed.innerHTML = response.wind_speed
 		wind_degrees.innerHTML = response.wind_degrees
-		sunrise.innerHTML = response.sunrise
-		sunset.innerHTML = response.sunset
 		
+		var sunrise_new = new Date(response.sunrise)
+		sunrise.innerHTML= sunrise_new.toLocaleTimeString();
+		var sunset_new = new Date(response.sunset)
+		sunset.innerHTML= sunset_new.toLocaleTimeString();
 	})
 	.catch(err => console.error(err));
 }
