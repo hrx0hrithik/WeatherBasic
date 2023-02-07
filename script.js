@@ -22,6 +22,7 @@ const getWeather = (city) =>{
 		wind_degrees.innerHTML = response.wind_degrees
 		sunrise.innerHTML = response.sunrise
 		sunset.innerHTML = response.sunset
+		
 	})
 	.catch(err => console.error(err));
 }
@@ -33,25 +34,30 @@ submit.addEventListener("click", (e)=>{
 
 getWeather("Delhi")
 
-const getWeather2 = () =>{
+const getWeatherMum = () =>{
 	fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Mumbai', options)
 	.then(response => response.json())
 	.then(response => {
 		console.log(response)
 		cloud_pct_mumbai.innerHTML = response.cloud_pct
-		temp_mumbai.innerHTML = response.temp
-		feels_like_mumbai.innerHTML = response.feels_like
-		humidity_mumbai.innerHTML = response.humidity
-		min_temp_mumbai.innerHTML = response.min_temp
-		max_temp_mumbai.innerHTML = response.max_temp
-		wind_speed_mumbai.innerHTML = response.wind_speed
-		wind_degrees_mumbai.innerHTML = response.wind_degrees
-		sunrise_mumbai.innerHTML = response.sunrise
-		sunset_mumbai.innerHTML = response.sunset
+		temp_mumbai.innerHTML = response.temp+"&#8451"
+		feels_like_mumbai.innerHTML = response.feels_like+"&#8451"
+		humidity_mumbai.innerHTML = response.humidity+"%"
+		min_temp_mumbai.innerHTML = response.min_temp+"&#8451"
+		max_temp_mumbai.innerHTML = response.max_temp+"&#8451"
+		wind_speed_mumbai.innerHTML = response.wind_speed+" Km/h"
+		wind_degrees_mumbai.innerHTML = response.wind_degrees+"&#176"
+		var sunrise_new = new Date(response.sunrise)
+		sunrise_mumbai.innerHTML= sunrise_new.toLocaleTimeString();
+		var sunset_new = new Date(response.sunset)
+		sunset_mumbai.innerHTML= sunset_new.toLocaleTimeString();
+
+		
 	})
 	.catch(err => console.error(err));
+	
 }
-getWeather2()
+getWeatherMum()
 
 const getWeatherKol = () =>{
 	fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Kolkata', options)
@@ -59,15 +65,18 @@ const getWeatherKol = () =>{
 	.then(response => {
 		console.log(response)
 		cloud_pct_kolkata.innerHTML = response.cloud_pct
-		temp_kolkata.innerHTML = response.temp
-		feels_like_kolkata.innerHTML = response.feels_like
-		humidity_kolkata.innerHTML = response.humidity
-		min_temp_kolkata.innerHTML = response.min_temp
-		max_temp_kolkata.innerHTML = response.max_temp
-		wind_speed_kolkata.innerHTML = response.wind_speed
-		wind_degrees_kolkata.innerHTML = response.wind_degrees
-		sunrise_kolkata.innerHTML = response.sunrise
-		sunset_kolkata.innerHTML = response.sunset
+		temp_kolkata.innerHTML = response.temp+"&#8451"
+		feels_like_kolkata.innerHTML = response.feels_like+"&#8451"
+		humidity_kolkata.innerHTML = response.humidity+"%"
+		min_temp_kolkata.innerHTML = response.min_temp+"&#8451"
+		max_temp_kolkata.innerHTML = response.max_temp+"&#8451"
+		wind_speed_kolkata.innerHTML = response.wind_speed+" Km/h"
+		wind_degrees_kolkata.innerHTML = response.wind_degrees+"&#176"
+		var sunrise_new = new Date(response.sunrise)
+		sunrise_kolkata.innerHTML= sunrise_new.toLocaleTimeString();
+		var sunset_new = new Date(response.sunset)
+		sunset_kolkata.innerHTML= sunset_new.toLocaleTimeString();
+
 	})
 	.catch(err => console.error(err));
 }
@@ -79,15 +88,19 @@ const getWeatherBan = () =>{
 	.then(response => {
 		console.log(response)
 		cloud_pct_bangalore.innerHTML = response.cloud_pct
-		temp_bangalore.innerHTML = response.temp
-		feels_like_bangalore.innerHTML = response.feels_like
-		humidity_bangalore.innerHTML = response.humidity
-		min_temp_bangalore.innerHTML = response.min_temp
-		max_temp_bangalore.innerHTML = response.max_temp
-		wind_speed_bangalore.innerHTML = response.wind_speed
-		wind_degrees_bangalore.innerHTML = response.wind_degrees
-		sunrise_bangalore.innerHTML = response.sunrise
-		sunset_bangalore.innerHTML = response.sunset
+		temp_bangalore.innerHTML = response.temp+"&#8451"
+		feels_like_bangalore.innerHTML = response.feels_like+"&#8451"
+		humidity_bangalore.innerHTML = response.humidity+"%"
+		min_temp_bangalore.innerHTML = response.min_temp+"&#8451"
+		max_temp_bangalore.innerHTML = response.max_temp+"&#8451"
+		wind_speed_bangalore.innerHTML = response.wind_speed+" Km/h"
+		wind_degrees_bangalore.innerHTML = response.wind_degrees+"&#176"
+
+		var sunrise_new = new Date(response.sunrise)
+		sunrise_bangalore.innerHTML= sunrise_new.toLocaleTimeString();
+		var sunset_new = new Date(response.sunset)
+		sunset_bangalore.innerHTML= sunset_new.toLocaleTimeString();
+
 	})
 	.catch(err => console.error(err));
 }
@@ -99,15 +112,19 @@ const getWeatherChn = () =>{
 	.then(response => {
 		console.log(response)
 		cloud_pct_chennai.innerHTML = response.cloud_pct
-		temp_chennai.innerHTML = response.temp
-		feels_like_chennai.innerHTML = response.feels_like
-		humidity_chennai.innerHTML = response.humidity
-		min_temp_chennai.innerHTML = response.min_temp
-		max_temp_chennai.innerHTML = response.max_temp
-		wind_speed_chennai.innerHTML = response.wind_speed
-		wind_degrees_chennai.innerHTML = response.wind_degrees
-		sunrise_chennai.innerHTML = response.sunrise
-		sunset_chennai.innerHTML = response.sunset
+		temp_chennai.innerHTML = response.temp+"&#8451"
+		feels_like_chennai.innerHTML = response.feels_like+"&#8451"
+		humidity_chennai.innerHTML = response.humidity+"%"
+		min_temp_chennai.innerHTML = response.min_temp+"&#8451"
+		max_temp_chennai.innerHTML = response.max_temp+"&#8451"
+		wind_speed_chennai.innerHTML = response.wind_speed+" Km/h"
+		wind_degrees_chennai.innerHTML = response.wind_degrees+"&#176"
+
+		var sunrise_new = new Date(response.sunrise)
+		sunrise_chennai.innerHTML= sunrise_new.toLocaleTimeString();
+		var sunset_new = new Date(response.sunset)
+		sunset_chennai.innerHTML= sunset_new.toLocaleTimeString();
+
 	})
 	.catch(err => console.error(err));
 }
